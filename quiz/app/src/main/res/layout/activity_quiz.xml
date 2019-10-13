@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".QuizActivity">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/quizViewtitle"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="0"
+    />
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quizViewtitle"
+            android:id="@+id/quizViewcount"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+    />
+    <ScrollView
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quizViewcount"
+            app:layout_constraintBottom_toTopOf="@id/quizViewselectbutton"
+            android:id="@+id/quizViewquiztext"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="0"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quizViewquestion"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quizViewquiztext"
+            app:layout_constraintBottom_toTopOf="@id/quizViewOkbutton"
+            android:id="@+id/quizViewselectbutton"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="0"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RadioGroup android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/RadioGroupAnswer">
+                <RadioButton android:text="1"
+                             android:id="@+id/RadioButtonAnswer1"
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content">
+                </RadioButton>
+                <RadioButton android:text="2"
+                             android:id="@+id/RadioButtonAnswer2"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                </RadioButton>
+                <RadioButton android:text="3"
+                             android:id="@+id/RadioButtonAnswer3"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                </RadioButton>
+                <RadioButton android:text="4"
+                             android:id="@+id/RadioButtonAnswer4"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                </RadioButton>
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+            android:text="回答する"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/quizViewOkbutton"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
