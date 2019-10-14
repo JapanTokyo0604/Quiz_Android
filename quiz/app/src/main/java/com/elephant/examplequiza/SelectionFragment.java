@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-class SelectionFragment extends Fragment {
+public class SelectionFragment extends Fragment {
     View rootView;
     ListView listView;
    // private static final String[] array = {"AAA","BBB"};
